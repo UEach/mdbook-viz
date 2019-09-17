@@ -2,13 +2,7 @@
 
 add [mdbook](https://github.com/rust-lang-nursery/mdBook) to support [Viz.js](https://github.com/mdaines/viz.js)
 
-It turns this:
-
-    ```dot
-    digraph {
-        a -> b
-    }
-    ```
+hint from [this Issues](https://github.com/rust-lang-nursery/mdBook/issues/762#issuecomment-502830041)
 
 ## HowTo
 
@@ -35,3 +29,12 @@ function rendorGraphvizElementClass() {
 
 rendorGraphvizElementClass() ;
 ```
+
+written Markdown `code` element for example
+
+    ```dot
+    digraph {
+        a -> b
+    }
+    ```
+and build it
