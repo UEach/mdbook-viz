@@ -3,27 +3,24 @@
 add [mdbook](https://github.com/rust-lang-nursery/mdBook) to support [Viz.js](https://github.com/mdaines/viz.js)
 
 It turns this:
-```
-```dot
-digraph {
-    a -> b
-}
-` ``` `
-```
-into this:
+
+    ```dot
+    digraph {
+        a -> b
+    }
+    ```
 
 ## HowTo
 
 Add the following to your `book.toml`
-```
-[output.html]
-additional-js = ["viz.js", "lite.render.js", "viz-init.js"]
-```
+
+    [output.html]
+    additional-js = ["viz.js", "lite.render.js", "viz-init.js"]
 
 - viz.js and lite.render.js from [viz.js release](https://github.com/mdaines/viz.js/releases) into your source directory.
 - viz-init.js contains the following code.
 
-```javascript:
+```javascript
 function rendorGraphvizElementClass() {
     var viz = new Viz();
    var dot = document.querySelector(".language-dot");
